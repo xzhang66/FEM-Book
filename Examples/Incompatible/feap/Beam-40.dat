@@ -1,0 +1,45 @@
+FEAP ** Beam in bending. Full integration, 10X4 4-node elements
+   0,0,1,2,2,4
+     !blank termination record
+MATErial,1
+   SOLId
+   ELAStic ISOTropic 1000 0.3 
+   PLANe STREss
+   QUADrature data 2 2
+     ! blank termination record
+BLOCk
+   CART, 10, 4, 1, 1, 1, 0, 0
+    1,   0.0,   0.0
+    2,  10.0,   0.0
+    3,  10.0,   2.0
+    4,   0.0,   2.0
+     ! blank termination record
+BOUNdary
+    1  0  1   1 
+   12  0  1   0
+   23  0  1   0
+   34  0  1   0
+   45  0  1   0
+      ! blank termination record
+FORCes
+   11  0    3.125  0.0
+   22  0    3.750  0.0
+   44  0   -3.750  0.0
+   55  0   -3.125  0.0
+     ! blank termination record
+END
+
+BATCh
+   TANGent
+   FORM
+   SOLVe
+   DISPlacement,ALL
+   stre all
+   reac all
+   plot cont 2
+   plot load
+   plot boun
+ END
+
+ INTEractive
+ STOP

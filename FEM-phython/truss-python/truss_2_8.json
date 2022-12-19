@@ -1,0 +1,30 @@
+{
+	"Title": " 1D truss described in Figure 2.8 (Fish book)", 
+	"nsd": 	1, 
+	"ndof": 1,
+	"nnp":  3,
+	"nel": 	2,
+	"nen": 	2,
+
+	"CArea":  [0.5, 1],
+	"E": [1, 1],
+
+	"d": [0],
+	"nd": 1,
+	
+	"fdof": [3],
+	"force": [10.0],
+
+	"x": [0.0, 1.0, 2.0], 
+	"y": [0.0, 0.0, 0.0],
+
+	"IEN": [
+		[1, 2],
+		[2, 3]
+	],
+
+	"plot_truss": "yes",
+	"plot_node" : "yes",
+	"plot_tex": "no"
+}
+

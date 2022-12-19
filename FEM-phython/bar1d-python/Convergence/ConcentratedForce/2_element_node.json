@@ -1,0 +1,36 @@
+{
+    "Title": " Convergence for concentrated force case by numerical elements (2 elements)",
+    "nsd": 	1,
+	"ndof": 1,
+	"nnp":  3,
+	"nel": 	2,
+	"nen": 	2,
+
+	"E": [10000, 10000, 10000],
+	"body": [0.0, 15.0, 32.0],
+	"CArea": [1, 1, 1],
+
+	"ngp": 2,
+
+	"flags": [2, 0, 1],
+	"e_bc": [0, 0, 0],
+	"n_bc": [0, 0, 100],
+	"nd": 1,
+
+	"np": 1,
+	"xp": [15],
+	"P": [100],
+
+	"x": [0.0, 15.0, 32.0],
+	"y": [1.0, 1.0, 1.0],
+
+	"IEN": [
+		[1, 2],
+		[2, 3]
+	],
+
+	"plot_bar": "no",
+	"plot_nod": "yes",
+	"plot_tex": "no",
+	"Exact": "ConcentratedForce"
+}

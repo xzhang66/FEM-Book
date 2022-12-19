@@ -1,0 +1,57 @@
+FEAP ** Example 4-6: Patch Test C, Reduced integration, 8-node serendipity element
+   15,2,1,2,2,8
+     !blank termination record
+MATErial,1
+   SOLId
+   ELAStic ISOTropic 1000 0.3 
+   PLANe STREss
+   QUADrature data 2 2
+     ! blank termination record
+COORdinates
+    1,  0  0.0,   0.0
+    2,  0  0.0,   1.0
+    3,  0  0.0,   2.0
+    4,  0  2.5,   0.0
+    5,  0  2.5,   1.0
+    6,  0  2.5,   2.0
+    7,  0  5.0,   0.0
+    8,  0  5.0,   1.0
+    9,  0  5.0,   2.0
+   10,  0  7.5,   0.0
+   11,  0  7.5,   1.0
+   12,  0  7.5,   2.0
+   13,  0 10.0,   0.0
+   14,  0 10.0,   1.0
+   15,  0 10.0,   2.0
+     ! blank termination record
+ELEMents
+    1, 0, 1, 1, 7, 9, 3, 4, 8, 6, 2
+    2, 0, 1, 7,13,15, 9,10,14,12, 8
+     ! blank termination record
+BOUNdary
+    1  0  1   0 
+    2  0  1   1
+    3  0  1   0
+    5  0  1   1
+   11  0  1   1
+     ! blank termination record
+FORCes
+   13  0    5.0  0.0
+   15  0   -5.0  0.0
+     ! blank termination record
+END
+
+BATCh
+   TANGent
+   FORM
+   SOLVe
+   DISPlacement,ALL
+   stre all
+   reac all
+   plot cont 2
+   plot load
+   plot boun
+ END
+
+ INTEractive
+ STOP

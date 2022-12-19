@@ -1,0 +1,47 @@
+{
+	"Title": "Example 4-1 (1 element)", 
+
+	"nsd": 2,
+	"ndof": 2, 
+	"nnp": 4,
+	"nel": 1, 
+	"nen": 4,
+ 
+ 	"E": 30e6,
+ 	"nu": 0.3, 
+  
+	"ngp": 2, 
+	"nd": 4, 
+ 
+	"flags": [2, 2, 2, 2, 0, 0, 0, 0],  
+ 
+	"nbe": 1, 
+	"n_bc": [
+		[1],
+		[4],  
+        [0], 
+        [-20], 
+        [0], 
+        [-20] 
+    ], 
+              
+	"x": [0.0, 0.0, 2.0, 2.0], 
+	"y": [1.0, 0.0, 0.5, 1.0], 
+ 
+	"IEN": [
+		[2], 
+		[3], 
+		[4], 
+		[1]
+	],
+ 
+	"plane_strain": 0,
+	"plot_mesh": "yes", 
+	"plot_nod" : "yes", 
+	"plot_disp": "yes", 
+	"compute_stress": "yes", 
+	"plot_stress_xx": "yes", 
+	"plot_mises": "yes", 
+	"plot_tex": "no",
+	"fact": "9.221e3"
+}
