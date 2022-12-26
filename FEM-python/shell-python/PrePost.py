@@ -69,8 +69,6 @@ def create_model_json(DataFile):
 	model.ly = FEData['ly']
 	model.nelx = FEData['nelx']
 	model.nely = FEData['nely']
-	model.nenx = model.nelx + 1
-	model.neny = model.nely + 1
 	if model.nelx % 2 != 0:
 		print('No. of Elements  {}  is not even, can not get the center deflection'.format(model.nelx))
 	if model.nely % 2 != 0:

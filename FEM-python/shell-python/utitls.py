@@ -94,7 +94,7 @@ def solvedr():
 	print('\nreaction f = \n', f_E)
 	
 	# write the center deflection
-	nc = int(model.nely / 2 * (model.nenx * 2 + model.nelx) + model.nelx) * model.ndof + 3
+	nc = int(model.nely / 2 * ((model.nelx + 1) * 2 + model.nelx) + model.nelx) * model.ndof + 3
 	model.w_c = model.d[model.ID[nc - 1] - 1]
 	print('\ncenter deflection =', model.w_c)
 
