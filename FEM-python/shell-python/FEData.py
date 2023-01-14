@@ -16,8 +16,6 @@ Global variables defining the FEM model
   ly : (float) Length of plate element in the y-direction.
   nelx : (int) Number of elements in the x-direction.
   nely : (int) Number of elements in the y-direction.
-  nenx : (int) Number of nodes in the x-direction (= nelx + 1).
-  neny : (int) Number of nodes in the y-direction (= nely + 1).
   q    : (float) The uniform load.
   
   flags: (numpy.array(neq))  Nodal boundary condition flag:
@@ -86,8 +84,6 @@ lx = 0.0
 ly = 0.0
 nelx = 0
 nely = 0
-nenx = 0
-neny = 0
 
 xb = None
 yb = None
