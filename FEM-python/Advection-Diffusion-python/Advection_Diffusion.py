@@ -82,7 +82,7 @@ if __name__ == "__main__":
     if nargs == 2:
         DataFile = argv[1]
     else:
-        print("Usage ： Bar1D file_name")
+        print("Usage ： Advection_Diffusion file_name")
         exit()
     
     FERun(DataFile)
