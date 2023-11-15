@@ -102,7 +102,7 @@ def BmatPlate(eta, psi):
 								-3*model.be/model.ae*eta_val[i]*eta*(1+psi_val[i]*psi), \
 								0, \
 								-model.be*eta_val[i]*(1+3*eta_val[i]*eta)*(1+psi_val[i]*psi)], \
-								[-3*model.be/model.ae*psi_val[i]*psi*(1+eta_val[i]*eta), \
+								[-3*model.ae/model.be*psi_val[i]*psi*(1+eta_val[i]*eta), \
 								model.ae*psi_val[i]*(1+3*psi_val[i]*psi)*(1+eta_val[i]*eta), \
 								0], \
 								[eta_val[i]*psi_val[i]*(4-3*eta**2-3*psi**2), \
