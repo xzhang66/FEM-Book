@@ -45,7 +45,7 @@ def create_model_json(DataFile):
 	model.K = np.zeros((model.neq, model.neq))
 
 	# element and material data (given at the element nodes)
-	model.E = np.array(FEData['E'])
+	model.EI = np.array(FEData['EI'])
 	model.body = np.array(FEData['body'])
 	model.CArea = np.array(FEData['CArea'])
 
@@ -170,7 +170,7 @@ def disp_moment_and_shear(e, ax1, ax2, ax3):
 		N = Nmatrix1D(gp[i], xe)
 		B = Bmatrix1D(gp[i], xe)*1/J**2
 		S = Smatrix1D(gp[i], xe)*1/J**3
-		Ee = model.E[e]
+		Ee = model.EI[e]
 
 		moment_gauss[i] = Ee*B@de
 		shear_gauss[i] = Ee*S@de
@@ -191,7 +191,7 @@ def disp_moment_and_shear(e, ax1, ax2, ax3):
 		N = Nmatrix1D(xi, xe)
 		B = Bmatrix1D(xi, xe)*1/J**2
 		S = Smatrix1D(xi, xe)*1/J**3
-		Ee = model.E[e]
+		Ee = model.EI[e]
 		displacement[i] = N@de
 		moment[i] = Ee*B@de
 		shear[i] = Ee*S@de

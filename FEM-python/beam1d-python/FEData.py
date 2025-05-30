@@ -12,7 +12,7 @@ Global variables defining the FEM model
   neq  : (int) Number of equations (D.O.F)
   neqe : (int) Number of equations for each element
   
-  E    : (numpy.array(nel)) Element values Young's modulus.
+  EI   : (numpy.array(nel)) Element values Young's modulus × moment of inertia.
   body : (numpy.arraay(nel)) Element values body forces.
   CArea: (numpy.array(nnp)) Nodal values of cross-sectional area.
   leng : (numpy.array(nel)) Element values element length
@@ -79,7 +79,7 @@ e_bc = None
 n_bc = None
 
 # element and material data (given at the element nodes)
-E     = None
+EI     = None
 body  = None
 CArea = None
 leng  = None

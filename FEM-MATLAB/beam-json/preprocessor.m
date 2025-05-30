@@ -31,7 +31,7 @@ n_bc = zeros(neq,1);    % initialize vector of natural boundary condition
 CArea = FEMData.CArea;  % Elements cross-sectional area   
 leng  = FEMData.leng;   % Elements length 
 body  = FEMData.body;   % body forces 
-E     = FEMData.E;      % Young's Modulus 
+EI     = FEMData.EI;    % Young's Modulus ¡Á moment of inertia
  
 % gauss integration 
 ngp   = FEMData.ngp;    % number of gauss points 

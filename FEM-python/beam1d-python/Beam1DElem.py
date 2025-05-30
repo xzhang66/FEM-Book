@@ -103,11 +103,10 @@ def BeamElem(e):
 		N = Nmatrix1D(gp[i], xe)
 		B = Bmatrix1D(gp[i], xe)*1/J**2
 
-		Ae = N[0][::2]@model.CArea[IENe]
-		Ee = model.E[e]
+		Ee = model.EI[e]
 		be = model.body[e]
 
-		ke = ke + w[i]*Ae*Ee*(B.T@B)
+		ke = ke + w[i]*Ee*(B.T@B)
 		fe = fe + w[i]*N.T*be
 
 	ke = J*ke

@@ -175,7 +175,7 @@ def ErrorNorm_Ex_6_1():
 			xt = 0.5 * (xe[0] + xe[model.nen - 1]) + J * gp[i]  # Gauss points in physical coordinates
 			
 			N = Nmatrix1D(gp[i], xe)  # shape functions matrix
-			Ee = model.E[e]  # Young's modulus at element gauss points
+			Ee = model.EI[e]  # Young's modulus at element gauss points
 			
 			uh = N @ de  # displacement at gauss point
 			# Exact displacement
@@ -239,7 +239,7 @@ def ErrorNorm_Ex_6_1():
 			xt = 0.5 * (xe[0] + xe[model.nen - 1]) + J * s   # Gauss points in physical coordinates
 			
 			N = Nmatrix1D(s, xe)  # shape functions matrix
-			Ee = model.E[e]  # Young's modulus at element gauss points
+			Ee = model.EI[e]  # Young's modulus at element gauss points
 			
 			uh = N @ de  # displacement at gauss point
 			# Exact displacement
