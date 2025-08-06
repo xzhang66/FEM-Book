@@ -97,7 +97,7 @@ def setup_ID_LM():
         if model.flags[i] == 2:   # Essential boundary node
             count = count + 1      
             model.ID[i] = count   # The reordered number of essential B.C
-            model.d[count] = model.e_bc[i] 
+            model.d[count-1] = model.e_bc[i] 
         else:
             count1 = count1 + 1
             model.ID[i] = model.nd + count1
@@ -112,7 +112,7 @@ def naturalBC():
     for i in range(model.neq):
        if model.flags[i] == 1:
           node = model.ID[i]-1
-          model.f[node] += model.CArea[node]*model.n_bc[node]
+          model.f[node] += model.CArea[i]*model.n_bc[i]
 
     
 def plotbar():
