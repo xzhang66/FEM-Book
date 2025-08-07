@@ -75,8 +75,8 @@ def create_model_json(DataFile):
     model.y = np.array(FEData['y'])  
     model.IEN = np.array(FEData['IEN'])
 
-    model.ID  = np.zeros(model.neq,np.int)
-    model.LM  = np.zeros((model.nen,model.nel),np.int)   
+    model.ID  = np.zeros(model.neq,int)
+    model.LM  = np.zeros((model.nen,model.nel),int)   
         
     if 'Exact' in FEData:
         model.Exact = FEData['Exact']
