@@ -27,7 +27,7 @@ def ExactSolution():
 	nx  = math.ceil(a / dx)
 	x = np.arange(-a/2, a/2, dx)
 	y = 0.0
-	w = np.zeros(nx, np.float)
+	w = np.zeros(nx, float)
 
 	pi = math.pi
 	m_all = np.array([1, 3, 5, 7])
