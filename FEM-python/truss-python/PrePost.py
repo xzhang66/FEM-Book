@@ -41,8 +41,8 @@ def create_model_json(DataFile):
     # define the mesh
     model.x = np.array(FEData['x'])
     model.y = np.array(FEData['y'])  
-    model.IEN = np.array(FEData['IEN'], dtype=np.int)
-    model.LM = np.zeros((model.nen*model.ndof, model.nel), dtype=np.int)
+    model.IEN = np.array(FEData['IEN'], dtype=int)
+    model.LM = np.zeros((model.nen*model.ndof, model.nel), dtype=int)
     set_LM()
 
     # element and material data (given at the element)

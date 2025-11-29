@@ -31,9 +31,9 @@ def ExactSolution_Fish_10_1(ax1, ax2, ax3):
 	p3 = 1; E = 1e4; I = 1.0
 
 	x = np.arange(0, 12, 0.05)
-	w = np.zeros(240, np.float)
-	M = np.zeros(240, np.float)
-	S = np.zeros(240, np.float)
+	w = np.zeros(240, float)
+	M = np.zeros(240, float)
+	S = np.zeros(240, float)
 
 	for index, xi in enumerate(x):
 		if xi < a1:
@@ -106,9 +106,9 @@ def ExactSolution_Ex_6_1(ax1, ax2, ax3):
 	E = 1e4; I = 1.0
 
 	x = np.arange(0, 8, 0.01)
-	w = np.zeros(800, np.float)
-	M = np.zeros(800, np.float)
-	S = np.zeros(800, np.float)
+	w = np.zeros(800, float)
+	M = np.zeros(800, float)
+	S = np.zeros(800, float)
 
 	for index, xi in enumerate(x):
 		if xi < 4:

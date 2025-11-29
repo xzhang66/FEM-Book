@@ -30,13 +30,13 @@ def ExactSolution_Ex_6_3(ax1, ax2):
 	nx  = math.ceil(a / dx)
 	x = np.arange(-a/2, a/2, dx)
 	y = 0.0
-	w = np.zeros(nx, np.float)
-	Mx = np.zeros(nx, np.float)
+	w = np.zeros(nx, float)
+	Mx = np.zeros(nx, float)
 
 	pi = math.pi
 	K = -4*q*a**2/pi**3
 	m_all = np.array([1, 3, 5, 7])
-	E = np.zeros(8, np.float)
+	E = np.zeros(8, float)
 	E[m_all[0]] = 0.3722*K
 	E[m_all[1]] = -0.0380*K
 	E[m_all[2]] = -0.0178*K
